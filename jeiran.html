@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>jei</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://kit.fontawesome.com/49bd20a9b8.js" crossorigin="anonymous"></script>
+            <link href="jeiran-css.css" rel="stylesheet" type="text/css"> 
+        </head>
+
+        <body>
+
+            <!-- title and counter of points -->
+            <div class="pointers row">
+                <div class="title">
+                    <img src="logo.svg" alt="logo">
+                </div>
+
+                <div class="countNumber">
+                    score<br>
+                    <span class="points">0</span>
+                </div>
+            </div>
+
+      
+            <!-- choise game part -->
+            <div class="game grid-cont choise" >
+                    <div class="rockDiv  rockDivhov"><button onclick="choise('rock')"   type="button" class="rockButton" ><img src="rock.png"   class="rockImg"></button></div> 
+                    <div class="paperDiv paperDivhov"><button onclick="choise('paper')"  type="button" class="paperButton"><img src="paper.png"  class="paperImg"></button></div> 
+                    <div class="sizerDiv sizerDivhov"><button onclick="choise('sisers')" type="button" class="sizerButton"><img src="sisors.png" class="sizerImg"></button></div> 
+            </div>
+
+
+            <!-- result game part -->
+            <div class="results grid-cont-result">
+                <div class="yourChois">
+                    <h1>you choise</h1>
+                    <div id="userresult" class="rockDiv"><button type="button" class="rockButton"><img id="userPiced" src="icon-rock.svg" class="rockImg"></button></div> 
+                </div>
+
+                <div class="playAgain">
+                    <p class="winOrLose">and you are a...</p>
+                    <button onclick="playAgayn()" type="button" class="paperButton hiddenPlayButton">play again</button>
+                </div>
+
+                <div class="pcChois">
+                    <h1>pc  choise</h1>
+                    <div class="paperDiv"><button type="button" class="paperButton"><img id="pcPiced" src="icon-paper.svg" class="paperImg"></button></div>
+                </div>
+            </div>
+
+            <div class="startAgayn">
+                <button type="button" class="startAgayinBTN" onclick="startAgayn()">start Agayn</button>
+            </div>
+        </body>
+    </html>
+<script type="text/javascript" src="jeiran-js.js"></script>

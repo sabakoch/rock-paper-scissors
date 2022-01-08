@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed",sans-serif;
+    
+}
+
+body{
+    background: radial-gradient(#1f3756, #141539);
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+  
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  @media only screen and (min-width: 550px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+
+  .container{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+
+.pointers{
+    border: solid 5px #606e85;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+}
+
+.title{
+    display: inline-block;
+    margin: 10px;
+}
+
+.countNumber{
+    background-color: white;
+    float: right;
+    width: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #2a46c0;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.points{
+    font-size: 50px;
+    width: 70px;
+    text-align: center;
+    border: none;
+}
+
+@media screen and (max-width: 776px) {
+    .title img {
+        width: 80px;
+        margin-top: 25%;
+    }
+
+    .countNumber{
+        width: 80px;
+    }
+
+    .pointers{
+        margin-top: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+/* grid conteiner wear you make your choise */
+.grid-cont{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 50px 130px;
+
+    background-image: url("bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-cont-result{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* here starts game styles  */
+.game{
+    margin-top: 7%;
+    position:relative;
+}
+
+.results{
+    display: none;
+    margin-top: 10%;
+}
+
+.results h1{
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.yourChois h1{
+text-align: right;
+}
+
+/* this is triangle witch i use to set background */
+.triangle{
+    width: 550px;
+    
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+
+/* rock button styles and position */
+.rockDiv{
+    text-align: right;
+    box-shadow: 10px 1px 2px rgba(189, 59%, 53% );
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.7s linear;
+}
+
+.rockDivhov :hover{
+    box-shadow: 2px 2px 40px 14px rgb(250, 54, 54);
+    transition: all 0.7s;
+    border-radius: 50%;
+}
+
+.winnerShadow{
+    box-shadow: 2px 2px 30px 14px white;
+    border-radius: 50%;
+}
+
+.rockImg{
+    width: 170px;
+    height: 170px;
+}
+
+.rockButton{
+    border: none;
+    border-radius: 50%;
+    background-color: Transparent;
+    cursor: pointer;
+}
+
+/* paper button styles ans position */
+.paperDiv{
+    text-align: left;
+    box-shadow: 10px 1px 2px rgba(189, 59%, 53% );
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.7s linear;
+}
+
+.paperDivhov :hover{
+    box-shadow: 2px 2px 30px 7px hsl(230, 89%, 65%);
+    transition: all 0.7s;
+    border-radius: 50%;
+}
+
+.paperImg{
+    width: 170px;
+    height: 170px;
+}
+
+.paperButton{
+    border: none;
+    border-radius: 50%;
+    background-color: Transparent;
+    cursor: pointer;
+}
+
+.hiddenPlayButton{
+    visibility: hidden;
+}
+
+.showPlayButton{
+    visibility: visible
+}
+
+/* sizers button styles ans position */
+.sizerDiv{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    box-shadow: 10px 1px 2px rgba(189, 59%, 53% );
+    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.7s linear;
+}
+
+.sizerDivhov :hover{
+    box-shadow: 2px 2px 30px 7px hsl(40, 84%, 53%);
+    transition: all 0.7s;
+    border-radius: 50%;
+}
+
+.sizerImg{
+    width: 170px;
+    height: 170px;
+}
+
+.sizerButton{
+    border: none;
+    border-radius: 50%;
+    background-color: Transparent;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------- */
+
+@media screen and (max-width: 776px) {
+    .rockImg{
+        width: 120px;
+        height: 120px;
+    }
+
+    .paperImg{
+        width: 120px;
+        height: 120px;
+    }
+
+    .sizerImg{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 462px) {
+
+    .grid-cont{
+        grid-row-gap: 110px;
+    }
+
+    .rockImg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .paperImg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .sizerImg{
+        width: 80px;
+        height: 80px;
+    }
+
+    .yourChois h1{
+        font-size: 20px;
+    }
+
+    .pcChois h1{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 762px) {
+    .playAgain p{
+        font-size: 2px;
+        font-weight: 700;
+    }
+    .playAgain{
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+
+    .grid-cont-result{
+        grid-template-columns: auto auto;
+        grid-gap: 30px;
+    }
+}
+
+
+.playAgain{
+    text-align: center;
+    padding-top: 4%;
+    color: white;
+}
+
+.playAgain p{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.playAgain button{
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 12px;
+    width: 40%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.active{
+    border: solid green 20px;
+}
+
+/* play again button styles */
+/* ---------------------------------------- */
+
+.startAgayn{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.startAgayinBTN{
+    border: solid 5px #e68a00;
+    padding: 10px;
+    background-color: #222121;
+    color: white;
+    font-family: 700;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.startAgayn :hover{
+    background-color: #e68a00;
+    border: none;
+    padding: 15px;
+}
